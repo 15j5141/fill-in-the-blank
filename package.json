@@ -2,9 +2,12 @@
   "name": "fill-in-the-blank",
   "version": "1.0.0",
   "description": "穴埋めを問題生成する.",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "node ./node_modules/webpack/bin/webpack --mode=development --watch",
+    "build": "node ./node_modules/webpack/bin/webpack --mode=development",
+    "release": "node ./node_modules/webpack/bin/webpack --mode=production",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -15,23 +18,18 @@
   "bugs": {
     "url": "https://github.com/15j5141/fill-in-the-blank/issues"
   },
-  "homepage": "https://github.com/15j5141/fill-in-the-blank#readme",
+  "homepage": "https://15j5141.github.io/fill-in-the-blank/",
   "devDependencies": {
     "eslint": "^7.10.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^6.12.0",
-    "eslint-plugin-compat": "^3.8.0",
     "eslint-plugin-jquery": "^1.5.1",
     "eslint-plugin-prettier": "^3.1.4",
     "prettier": "^2.1.2"
   },
   "dependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/polyfill": "^7.11.5",
-    "@babel/preset-env": "^7.11.5",
-    "babel-loader": "^8.1.0",
     "copy-webpack-plugin": "^6.2.0",
-    "core-js": "^3.6.5",
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^4.5.0",
     "jquery": "^3.5.1",
     "json-loader": "^0.5.7",
